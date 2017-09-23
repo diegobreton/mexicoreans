@@ -1,0 +1,6 @@
+.site-header-container
+{
+  margin-bottom: 60px;
+  @include remove-navbar-active-styles();
+  @include set-navbar-cursor-pointer();
+}

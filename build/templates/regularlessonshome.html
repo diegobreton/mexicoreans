@@ -1,0 +1,26 @@
+<div class="regularLessonsHome-container container">
+  <h1>일반 강의</h1>
+  <div class="lesson-link-container">
+    <div class="lesson-link--lesson" ng-repeat="level in vm.getAllLevels()">
+        <a class="lesson-link--text badge badge-pill badge-info" ng-click="vm.goToLesson($index+1)">{{"레벨 " + ($index+1)}}</a>
+    </div>
+  </div>
+  <div ng-repeat="level in vm.getAllLevels()">
+    <div class="regularLessonsHome-level row" id="level-{{$index+1}}">
+      <img class="col-sm-2 regularLessonsHome-level--image" ng-src="{{level.imgSrc}}"/>
+      <div class="regularLessonsHome-level--summary col-sm-8 h">
+        <p class="regularLessonsHome-level--title">레벨 {{$index + 1}}</p>
+        <p>{{level.summary}}</p>
+      </div>
+      <div class="regularLesson-level--expand col-sm-2">
+         <a class = "btn btn-primary" data-toggle="collapse" href="#regularLessonsHome-level--lessons--{{$index + 1}}" target=_self>보기</a>
+      </div>
+    </div>
+    <div id="regularLessonsHome-level--lessons--{{$index + 1}}" class="regularLessonsHome-level--lessons panel-collapse collapse list-group">
+      <a class="list-group-item" ng-repeat="lesson in level.lessonCollection" ng-href="{{lesson.target}}">{{lesson.title}}</a>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-info btn-circle btn-lg go-to-top-btn" onclick="scrollToTop()"><i class="glyphicon glyphicon-chevron-up"></i></button>
+
+</div>

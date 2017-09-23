@@ -1,0 +1,18 @@
+<div class="regularLessonsList-container container">
+  <h1>regular lesons</h1>
+  <div ng-repeat="level in vm.allLevels">
+    <div class="regularLessonsList-level row">
+      <img class="col-sm-2 regularLessonsList-level--image" ng-src="{{level.imgSrc}}"/>
+      <div class="regularLessonsList-level--summary col-sm-8 h">
+        <p class="regularLessonsList-level--title">Level {{$index + 1}}</p>
+        <p>{{level.summary}}</p>
+      </div>
+      <div class="regularLesson-level--expand col-sm-2">
+         <a class = "btn btn-primary" data-toggle="collapse" href="#regularLessonsList-level--lessons--{{$index + 1}}" target=_self>보기</a>
+      </div>
+    </div>
+    <div id="regularLessonsList-level--lessons--{{$index + 1}}" class="regularLessonsList-level--lessons panel-collapse collapse">
+      Lessons
+    </div>
+  </div>
+</div>

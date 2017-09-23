@@ -1,0 +1,38 @@
+.regularLessonsHome-container{
+  .go-to-top-btn{
+    @include go-to-top-btn();
+  }
+
+  .regularLessonsHome-level{
+    border-bottom: 1px solid $theme_main;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+  .regularLessonsHome-level--expand{
+    display: inline-block;
+    text-align: center;
+  }
+  .regularLessonsHome-level--image{
+    max-width: 300px;
+  }
+  .lesson-link--lesson{
+    display: inline-block;
+    margin: 3px 5px;
+  }
+  .lesson-link--text{
+    color: #fff;
+    background-color: #5bc0de;
+    font-size: 1em;
+    font-weight: initial;
+    text-align: center;
+    text-decoration: none;
+  }
+  .regularLessonsHome-level--summary{
+    display: inline-block;
+    text-align: justify;
+  }
+  .regularLessonsHome-level--title{
+    color: $theme_main;
+    font-size: 2em;
+  }
+}

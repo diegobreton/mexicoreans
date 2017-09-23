@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Application</title>
+    <link href="./assets/css/main.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"><!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body ng-app="frontPageApp">
+    <site-header></site-header>
+
+    <div ui-view></div>
+    <!--BEGIN ANGULAR FILES-->
+    <script src="./assets/js/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <script src="./apps/frontPageApp.js"></script>
+    <script src="./components/header.component.js"></script>
+    <script src="./components/homepage.component.js"></script>
+    <script src="./components/homepagecontent.component.js"></script>
+    <script src="./components/homepagecarrousel.component.js"></script>
+    <script src="./components/regularlessonshome.component.js"></script>
+    <script src="./assets/js/collapseNavbar.js"></script>
+    <script src="./assets/js/scrollToTop.js"></script>
+  </body>
+</html>
