@@ -1,0 +1,6 @@
+<div class="regularLesson-container container" ng-cloak>
+  <a href="javascript:history.back()" class="prev-btn">이전 페이지</a>
+  <h1>{{vm.lesson.code}}: {{vm.lesson.title}}</h1>
+  <div class="lesson-body" ng-bind-html="vm.parseLessonBody()">
+  </div>
+</div>

@@ -1,8 +1,12 @@
-(function(){
-  angular.module('frontPageApp',['ui.router']);
+;(function(){
+  angular.module('frontPageApp', ['ui.router']);
 
   angular.module('frontPageApp')
-    .config(function($stateProvider, $urlRouterProvider) {
+    .config(appConfigurationFunction);
+
+    appConfigurationFunction.$inject = ['$stateProvider', '$urlRouterProvider'];
+
+    function appConfigurationFunction($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/home');
 
       $stateProvider
@@ -11,15 +15,35 @@
           component: 'homePage'
         })
         .state('lessons', {
-          abstract:true,
+          abstract: true,
           url: '/lessons',
           template: '<ui-view/>'
         })
         .state('lessons.regular', {
           url: '/regular',
           component: 'regularLessonsHome'
+        })
+        .state('lessons.viewlesson', {
+          //url: '/?lessonId&lessonCode',
+          //url: '/:lessonCode',
+          url: '/:lessonId',
+          params:{
+            //lessonId: null
+            lessonCode: null
+          },
+          component:'regularLesson',
+          resolve: {
+            //   lessonCode: function($transition$){
+            //   //console.log($transition$.params());
+            //   return $transition$.params().lessonCode;
+            // },
+              lessonId: function($transition$){
+                //console.log($transition$.params());
+                return $transition$.params().lessonId;
+             },
+          }
         });
-    });
+    }
 
     angular.module('frontPageApp')
       .run(['$anchorScroll', function($anchorScroll) {

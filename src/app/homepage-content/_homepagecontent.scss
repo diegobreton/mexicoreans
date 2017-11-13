@@ -1,0 +1,31 @@
+.homepagecontent-container{
+  .homepage--section{
+    &::after{
+      background-color: #5bc0de;
+      content: '';
+      display: block;
+      height:1px;
+      margin: 20px auto 25px auto;
+      width: 50%;
+    }
+  }
+  .section-title{
+    color: $theme_main;
+    text-align: center;
+    font-size: 2.8em;
+  }
+  .section-subtitle{
+    color: #a19494;
+    text-align: center;
+    font-size: 1.7em;
+    &:after{
+      background-color: gray;
+      content: '';
+      display: block;
+      height:2px;
+      margin: 20px auto 25px auto;
+      width: 150px;
+    }
+  }
+}
+//class="img-responsive"

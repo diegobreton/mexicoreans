@@ -1,0 +1,14 @@
+.prev-btn-tmpl {
+  @include border-radius(15px);
+  border: 1px solid #3498db;
+  font-family: Arial;
+  color: #3498db;
+  font-size: 13px;
+  padding: 5px 16px;
+  background-color: transparent;
+  text-decoration: none;
+  &:hover{
+    background-color: #3498db;
+    color: #fff;
+  }
+}
