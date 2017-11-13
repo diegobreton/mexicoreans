@@ -1,4 +1,4 @@
-function scrollToTop() {
+;function scrollToTop() {
   var $mybuttons = $('.go-to-top-btn');
 
 	$(window).scroll(function () {

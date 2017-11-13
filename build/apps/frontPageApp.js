@@ -18,6 +18,25 @@
         .state('lessons.regular', {
           url: '/regular',
           component: 'regularLessonsHome'
+        })
+        .state('lessons.viewlesson', {
+          //url: '/?lessonId&lessonCode',
+          url: '/:lessonCode',
+          params:{
+            lessonId: null
+          },
+          component:'regularLesson',
+          resolve: {
+              lessonCode: function($transition$){
+              console.log($transition$.params());
+              return $transition$.params().lessonCode;
+            },
+              lessonId: function($transition$){
+                console.log($transition$.params());
+                return $transition$.params().lessonId;
+                //return '190'
+             },
+          }
         });
     });
 

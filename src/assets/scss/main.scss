@@ -1,8 +1,17 @@
 @import 'variables';
 @import 'mixins';
 @import 'sizes';
+@import '_extend_templates.scss';
 @import '../../app/header/header';
+@import '../../app/footer/footer';
 @import '../../app/homepage/homepage';
 @import '../../app/homepage-content/homepagecontent';
 @import '../../app/homepage-carrousel/homepagecarrousel';
 @import '../../app/regular-lessons-home/regularlessonshome';
+@import '../../app/regular-lesson/regularlesson';
+
+.site-wrapper{
+  position: relative;
+  min-height: calc(100vh);
+  padding-bottom: 2.2 * $footer-height;
+}

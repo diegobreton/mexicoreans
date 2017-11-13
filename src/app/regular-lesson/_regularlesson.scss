@@ -1,0 +1,9 @@
+.regularLesson-container{
+  .prev-btn{
+    @extend .prev-btn-tmpl;
+  }
+
+  .lesson-body{
+    text-align: justify;
+  }
+}

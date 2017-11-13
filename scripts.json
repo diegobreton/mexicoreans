@@ -1,0 +1,6 @@
+[
+  "./src/app/modules/*.js",
+  "./src/app/services/*.js",
+  "./src/app/**/*.component.js",
+  "./src/assets/js/*.js"
+]

@@ -2,7 +2,6 @@
   .go-to-top-btn{
     @include go-to-top-btn();
   }
-
   .regularLessonsHome-level{
     border-bottom: 1px solid $theme_main;
     margin: 10px 0;
@@ -34,5 +33,11 @@
   .regularLessonsHome-level--title{
     color: $theme_main;
     font-size: 2em;
+  }
+
+  @media screen and (max-width: $mobile-t){
+    .regularLessonsHome-level--image{
+      margin-bottom: 5px;
+    }
   }
 }
